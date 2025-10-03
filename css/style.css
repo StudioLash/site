@@ -1,0 +1,61 @@
+/*
+ * Configurações de Cores e Tipografia para um Visual Profissional (Rose Gold & Verde Elegante)
+ */
+
+:root {
+    /* Cores da Paleta */
+    --bs-primary: #B76E79; /* ROSE GOLD */
+    --bs-success: #4CAF50; /* Verde de Agendamento (CTA) */
+    --bs-dark: #333333;    /* Texto mais escuro para maior legibilidade */
+}
+
+/* Aplicação das Fontes */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bs-dark);
+}
+
+/* Títulos, Cabeçalhos e Marca com fonte de destaque */
+h1, h2, h3, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Sobrescrevendo as cores do Bootstrap para usar os novos tons */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+/* Estilização do Botão Primário (Botões "Conheça a Especialista", etc.) */
+.btn-primary {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #A05C67; /* Rose Gold um pouco mais escuro no hover */
+    --bs-btn-hover-border-color: #A05C67;
+    --bs-btn-active-bg: #8C4B56;
+}
+
+/* Estilização do Botão Success (Botões "Agendar", "Chamar no WhatsApp") */
+.btn-success {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: var(--bs-success);
+    --bs-btn-border-color: var(--bs-success);
+    --bs-btn-hover-bg: #388E3C; /* Verde mais escuro no hover */
+    --bs-btn-hover-border-color: #388E3C;
+    --bs-btn-active-bg: #2E7D32;
+}
+
+/* Efeito Hover Sutil e TAMANHO FIXO para Galeria */
+.galeria-img {
+    height: 250px; /* Altura fixa para uniformizar a galeria */
+    width: 100%; /* Preenche a largura da coluna */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer (pode cortar as bordas) */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.galeria-img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
